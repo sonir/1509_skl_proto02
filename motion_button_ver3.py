@@ -6,8 +6,12 @@ import RPi.GPIO as GPIO
 
 #Define Sysrtem Variables
 port = 5678
-ip_adr = '127.0.0.1'
-
+ip_adr = '224.0.0.1'
+pre_acc = 0 #for strage previous acc
+#low_pass = 0.015
+low_pass = 0.03 #0.05
+diff_total = 0
+rotation = 3.14 #7.52
 
 #Setup GPIOS
 GPIO.setmode(GPIO.BOARD)
@@ -80,17 +84,35 @@ try:
             y_acc = measure_acc(y_adr)
             z_acc = measure_acc(z_adr)
 
+            #create OSC Message
             msg.setAddress("/acs/motion")
 
-            # msg.append(x_acc)
-            # msg.append(y_acc)
-            # msg.append(z_acc)
-            3d_acc = (x_acc*y_acc*z_acc)
-            msg.append(3d_acc)
-            client.sendto(msg, OSCaddress)
-            print(3d_acc+"\n")
 
-            time.sleep(0.01)
+            acc = x_acc*y_acc*z_acc
+            diff = abs(acc - pre_acc)
+
+            if diff < low_pass:
+                diff = 0
+
+            diff_total += diff
+            
+            if diff_total > rotation: #rotation limitter
+                diff_total = rotation
+
+            rescaled = diff_total / rotation
+
+            msg.append(rescaled)
+            client.sendto(msg, OSCaddress)
+            print(rescaled)
+
+            if diff_total >= rotation: # reset counter
+                diff_total = 0
+
+            #storage now acc as pre
+            pre_acc = acc
+            time.sleep(0.005)
+
+
 
     #print 'X = %2.2f' % x_acc, '[g], Y = %2.2f]' % y_acc,'[g], Z = %2.2f' % z_acc, '[g]'
 

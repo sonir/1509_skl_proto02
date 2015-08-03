@@ -4,6 +4,12 @@ import time
 import OSC
 import RPi.GPIO as GPIO
 
+#Define Sysrtem Variables
+port = 5678
+ip_adr = '127.0.0.1'
+
+
+#Setup GPIOS
 GPIO.setmode(GPIO.BOARD)
 SW = 7
 GPIO.setup(SW, GPIO.IN)
@@ -47,7 +53,7 @@ def measure_acc(adr):
 
 
 client = OSC.OSCClient()
-OSCaddress = ('127.0.0.1', 5678)
+OSCaddress = (ip_adr, port)
 #OSCaddress2 = ('192.168.0.2', 5678)
 
 init_ADXL345()

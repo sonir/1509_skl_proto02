@@ -6,8 +6,8 @@ import RPi.GPIO as GPIO
 
 #Define Sysrtem Variables
 port = 5678
-ip_adr = '127.0.0.1'
-
+#ip_adr = '127.0.0.1'
+ip_adr = '224.0.0.1'
 
 #Setup GPIOS
 GPIO.setmode(GPIO.BOARD)

@@ -6,17 +6,12 @@ import RPi.GPIO as GPIO
 
 #Define Sysrtem Variables
 port = 5678
-<<<<<<< HEAD
-#ip_adr = '127.0.0.1'
-ip_adr = '224.0.0.1'
-=======
 ip_adr = '224.0.0.1'
 pre_acc = 0 #for strage previous acc
 #low_pass = 0.015
 low_pass = 0.03 #0.05
 diff_total = 0
 rotation = 3.14 #7.52
->>>>>>> 530400235d16cac67937e317fe858e463617239c
 
 #Setup GPIOS
 GPIO.setmode(GPIO.BOARD)
@@ -104,18 +99,17 @@ try:
             if diff_total > rotation: #rotation limitter
                 diff_total = rotation
 
-            rescaled = diff_total / rotation
 
-            msg.append(rescaled)
+            msg.append(diff_total)
             client.sendto(msg, OSCaddress)
-            print(rescaled)
+            print(diff_total)
 
             if diff_total >= rotation: # reset counter
                 diff_total = 0
 
             #storage now acc as pre
             pre_acc = acc
-            time.sleep(0.005)
+            time.sleep(0.01)
 
 
 

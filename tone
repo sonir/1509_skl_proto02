@@ -1,8 +1,8 @@
 echo "tone started"
 cd "/home/pi/1509_skl_proto02"
 sh begin.sh
-#alias pd-tone="sudo pd-extended -nogui -alsa sound_ver8.pd &"
-#alias py-tone="sudo python2 motion_button_ver3b.py"
+#alias pd-tone="sudo pd-extended -nogui -alsa sound_ver9.pd &"
+#alias py-tone="sudo python2 motion_button_ver4.py"
 #alias tone="source ~/.tone_call"
 
 

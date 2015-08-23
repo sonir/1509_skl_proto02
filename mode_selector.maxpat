@@ -80,6 +80,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 461.5, 113.0, 223.5, 33.0 ],
+					"presentation" : 1,
+					"presentation_linecount" : 2,
+					"presentation_rect" : [ 459.5, 296.0, 223.5, 33.0 ],
 					"text" : "Frequency = \nFrequency_Max * (Count / Count_Max)"
 				}
 
@@ -95,6 +98,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 309.0, 113.0, 150.0, 33.0 ],
+					"presentation" : 1,
+					"presentation_linecount" : 2,
+					"presentation_rect" : [ 321.0, 296.0, 121.0, 33.0 ],
 					"text" : "Amplitude = \nCount / Count_Max"
 				}
 
@@ -363,7 +369,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 210.0, 532.0, 51.0, 18.0 ],
-					"text" : "/reset 1"
+					"text" : "/reset 0"
 				}
 
 			}

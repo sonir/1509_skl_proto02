@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 825.0, 318.0, 749.0, 683.0 ],
+		"rect" : [ 347.0, 246.0, 749.0, 683.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -37,6 +37,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 248.0, 368.0, 77.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 166.0, 264.0, 77.0, 20.0 ],
 					"text" : "Effect Ratio"
 				}
 
@@ -81,7 +83,9 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 248.0, 391.0, 50.0, 20.0 ]
+					"patching_rect" : [ 248.0, 391.0, 50.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 243.0, 264.0, 50.0, 20.0 ]
 				}
 
 			}
@@ -137,7 +141,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 461.5, 113.0, 223.5, 33.0 ],
+					"patching_rect" : [ 486.5, 113.0, 223.5, 33.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
 					"presentation_rect" : [ 459.5, 296.0, 223.5, 33.0 ],
@@ -155,7 +159,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 309.0, 113.0, 150.0, 33.0 ],
+					"patching_rect" : [ 339.5, 113.0, 119.5, 33.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
 					"presentation_rect" : [ 321.0, 296.0, 121.0, 33.0 ],
@@ -271,7 +275,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 461.5, 156.0, 114.0, 33.0 ],
+					"patching_rect" : [ 486.5, 156.0, 114.0, 33.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
 					"presentation_rect" : [ 459.5, 86.0, 117.0, 33.0 ],
@@ -528,6 +532,7 @@
 					"destination" : [ "obj-25", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"midpoints" : [ 383.5, 219.0, 518.0, 219.0 ],
 					"source" : [ "obj-19", 0 ]
 				}
 

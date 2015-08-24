@@ -1,3 +1,7 @@
+#defines
+mode = "GLOBAL"
+# mode = "LOCAL"
+
 #import libraries
 import smbus
 import time
@@ -6,7 +10,11 @@ import RPi.GPIO as GPIO
 
 #Define Sysrtem Variables
 port = 5678
-ip_adr = '224.0.0.1'
+if mode == 'GLOBAL':
+    ip_adr = '224.0.0.1'
+else:
+    ip_adr = '127.0.0.1'
+
 pre_acc = 0 #for strage previous acc
 #low_pass = 0.015
 low_pass = 0.03 #0.05

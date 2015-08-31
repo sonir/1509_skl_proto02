@@ -1,6 +1,6 @@
 #defines
-mode = "GLOBAL"
-# mode = "LOCAL"
+#mode = "GLOBAL"
+mode = "LOCAL"
 
 #import libraries
 import smbus
